@@ -8,12 +8,12 @@ package ui;
  *
  * @author krishna
  */
-public class viewJPanel extends javax.swing.JPanel {
+public class DeleteJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form viewJPanel
+     * Creates new form deleteJPanel
      */
-    public viewJPanel() {
+    public DeleteJPanel() {
         initComponents();
     }
 

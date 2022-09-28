@@ -8,12 +8,12 @@ package ui;
  *
  * @author krishna
  */
-public class updateJPanel extends javax.swing.JPanel {
+public class UpdateJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form updateJPanel
      */
-    public updateJPanel() {
+    public UpdateJPanel() {
         initComponents();
     }
 

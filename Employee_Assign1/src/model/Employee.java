@@ -11,8 +11,8 @@ package model;
 public class Employee {
     
     private String name;
-    private int employeeId;
-    private int age;
+    private String employeeId;
+    private String age;
     private String gender;
     private String startDate;
     private String level;
@@ -31,19 +31,19 @@ public class Employee {
         this.name = name;
     }
 
-    public int getEmployeeId() {
+    public String getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(int employeeId) {
+    public void setEmployeeId(String employeeId) {
         this.employeeId = employeeId;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -118,6 +118,7 @@ public class Employee {
     public void setPhoto(String photo) {
         this.photo = photo;
     }
+
     
     
     
