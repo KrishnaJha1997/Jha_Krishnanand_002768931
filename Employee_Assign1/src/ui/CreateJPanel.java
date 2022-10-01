@@ -5,10 +5,12 @@
 package ui;
 
 
-import java.util.HashSet;
-import java.util.Set;
+//import java.util.HashSet;
+//import java.util.Set;
 import javax.swing.JOptionPane;
-import model.Employee;
+import model.EmployeeInfo;
+//import model.Employee;
+import model.EmployeeInfoHistory;
 
 /**
  *
@@ -20,11 +22,13 @@ public class CreateJPanel extends javax.swing.JPanel {
      * Creates new form createJPanel
      */
     
-    Employee employee;
+    //Employee employee;
     
-    public CreateJPanel(Employee employee) {
+    EmployeeInfoHistory history;
+    
+    public CreateJPanel(EmployeeInfoHistory history) {
         initComponents();
-        this.employee = employee;
+        this.history = history;
     }
 
     /**
@@ -224,31 +228,70 @@ public class CreateJPanel extends javax.swing.JPanel {
                     .addComponent(txtEmailAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(39, 39, 39)
                 .addComponent(btnSave)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(259, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
         // TODO add your handling code here:
         
-        employee.setName(txtName.getText());
-        employee.setEmployeeId(txtEmployeeId.getText());
-        employee.setAge(txtAge.getText());
-        employee.setGender(txtGender.getText());
-        employee.setStartDate(txtStartDate.getText());
-        employee.setLevel(txtLevel.getText());
-        employee.setTeamInfo(txtTeamInfo.getText());
-        employee.setPositionTitle(txtPositionTitle.getText());
-        employee.setCellPhoneNumber(txtCellPhoneNumber.getText());
-        employee.setEmailAddress(txtEmailAddress.getText());
-        employee.setPhoto(lblImage.getText());
-        
+          String name = txtName.getText();
+          String employeeId = txtEmployeeId.getText();
+          String age = txtAge.getText();
+          String gender = txtGender.getText();
+          String startDate = txtStartDate.getText();
+          String level = txtLevel.getText();
+          String teamInfo = txtTeamInfo.getText();
+          String positionTitle = txtPositionTitle.getText();
+          String cellPhoneNumber = txtCellPhoneNumber.getText();
+          String emailAddress = txtEmailAddress.getText();
+          String photo = lblImage.getText();
+          
+          EmployeeInfo ei = history.addNewEmployee(); 
+          
+          ei.setName(name);
+          ei.setEmployeeId(employeeId);
+          ei.setAge(age);
+          ei.setGender(gender);
+          ei.setStartDate(startDate);
+          ei.setLevel(level);
+          ei.setTeamInfo(teamInfo);
+          ei.setPositionTitle(positionTitle);
+          ei.setCellPhoneNumber(cellPhoneNumber);
+          ei.setEmailAddress(emailAddress);
+          ei.setPhoto(photo);
+          
+          
+          
+          
+          
+          
+//        employee.setName(txtName.getText());
+//        employee.setEmployeeId(txtEmployeeId.getText());
+//        employee.setAge(txtAge.getText());
+//        employee.setGender(txtGender.getText());
+//        employee.setStartDate(txtStartDate.getText());
+//        employee.setLevel(txtLevel.getText());
+//        employee.setTeamInfo(txtTeamInfo.getText());
+//        employee.setPositionTitle(txtPositionTitle.getText());
+//        employee.setCellPhoneNumber(txtCellPhoneNumber.getText());
+//        employee.setEmailAddress(txtEmailAddress.getText());
+//        employee.setPhoto(lblImage.getText());
+//        
         JOptionPane.showMessageDialog(this, "Employee added Successfully.");
                 
         
-        
-        
-        
+        txtName.setText("");
+        txtEmployeeId.setText("");
+        txtAge.setText("");
+        txtGender.setText("");
+        txtStartDate.setText("");
+        txtLevel.setText("");      
+        txtTeamInfo.setText("");
+        txtPositionTitle.setText("");
+        txtCellPhoneNumber.setText("");
+        txtEmailAddress.setText("");
+        lblImage.setText("");  
         
     }//GEN-LAST:event_btnSaveActionPerformed
 
