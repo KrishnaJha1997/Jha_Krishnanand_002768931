@@ -4,12 +4,14 @@
  */
 package ui;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
 import model.EmployeeInfo;
-import model.EmployeeInfoHistory;
+import model.EmployeeInfoHistory;  
 
 /**
  *
@@ -102,7 +104,6 @@ public class ViewJPanel extends javax.swing.JPanel {
         lblAge.setText("Age:");
 
         lblImage.setBackground(new java.awt.Color(255, 255, 255));
-        lblImage.setText("Image here");
         lblImage.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         lblGender.setText("Gender:");
@@ -166,6 +167,11 @@ public class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
+        txtSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSearchActionPerformed(evt);
+            }
+        });
         txtSearch.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtSearchKeyReleased(evt);
@@ -237,11 +243,11 @@ public class ViewJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(296, 296, 296)
                         .addComponent(btnUpdateDetails)))
-                .addGap(0, 64, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(114, 114, 114)
-                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 606, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 573, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(113, 113, 113))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -305,7 +311,7 @@ public class ViewJPanel extends javax.swing.JPanel {
                     .addComponent(txtEmailAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnUpdateDetails)
-                .addContainerGap(152, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -332,9 +338,28 @@ public class ViewJPanel extends javax.swing.JPanel {
         
         history.deleteEmployee(selectedEmployees);
         
-        JOptionPane.showMessageDialog(this, "Employee Details deleted successfully");
-        
         populateTable();
+        
+        txtName.setText("");
+        txtEmployeeId.setText("");
+        txtAge.setText("");
+        txtGender.setText("");
+        txtStartDate.setText("");
+        txtLevel.setText("");      
+        txtTeamInfo.setText("");
+        txtPositionTitle.setText("");
+        txtCellPhoneNumber.setText("");
+        txtEmailAddress.setText("");
+        lblImage.setIcon(null);  
+        
+        try {
+            Thread.sleep(500);
+            JOptionPane.showMessageDialog(this, "Employee Details deleted successfully");
+        } catch (InterruptedException ex) {
+            Logger.getLogger(ViewJPanel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
         
                 
     }//GEN-LAST:event_btnDeleteDetailsActionPerformed
@@ -345,7 +370,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         int selectedRowIndex = tblEmployee.getSelectedRow();
         
         if (selectedRowIndex<0) {
-            JOptionPane.showMessageDialog(this, "Please select the row to be deleted");
+            JOptionPane.showMessageDialog(this, "Please select the row to be Viewed");
             return;
         }
         
@@ -423,6 +448,10 @@ public class ViewJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_txtSearchKeyReleased
 
+    private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSearchActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDeleteDetails;
@@ -457,7 +486,7 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtTeamInfo;
     // End of variables declaration//GEN-END:variables
 
-    private void displayEmployee() {
+ //   private void displayEmployee() {
 //        
 //        txtName.setText(employee.getName());
 //        txtEmployeeId.setText(employee.getEmployeeId());
@@ -472,7 +501,7 @@ public class ViewJPanel extends javax.swing.JPanel {
 //        lblImage.setText(employee.getPhoto());
 //        
         
-    }
+    //}
 
     private void populateTable() {
         
@@ -498,10 +527,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         tblEmployee.setRowSorter(tr);
         
         tr.setRowFilter(RowFilter.regexFilter(query));
-        
-        
-        
-        
+           
     }
 }
 
