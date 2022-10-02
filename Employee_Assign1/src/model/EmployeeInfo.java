@@ -4,6 +4,8 @@
  */
 package model;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author krishna
@@ -11,17 +13,17 @@ package model;
 public class EmployeeInfo {
     
     private String name;
-    private String employeeId;
-    private String age;
+    private int employeeId;
+    private int age;
     private String gender;
     private String startDate;
     private String level;
     private String teamInfo;
     private String positionTitle;
     private String contactInfo;
-    private String cellPhoneNumber;
+    private int cellPhoneNumber;
     private String emailAddress;
-    private String photo;
+    private ImageIcon photo;
 
     public String getName() {
         return name;
@@ -31,19 +33,19 @@ public class EmployeeInfo {
         this.name = name;
     }
 
-    public String getEmployeeId() {
+    public int getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(String employeeId) {
+    public void setEmployeeId(int employeeId) {
         this.employeeId = employeeId;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
@@ -95,11 +97,11 @@ public class EmployeeInfo {
         this.contactInfo = contactInfo;
     }
 
-    public String getCellPhoneNumber() {
+    public int getCellPhoneNumber() {
         return cellPhoneNumber;
     }
 
-    public void setCellPhoneNumber(String cellPhoneNumber) {
+    public void setCellPhoneNumber(int cellPhoneNumber) {
         this.cellPhoneNumber = cellPhoneNumber;
     }
 
@@ -111,15 +113,17 @@ public class EmployeeInfo {
         this.emailAddress = emailAddress;
     }
 
-    public String getPhoto() {
+    public ImageIcon getPhoto() {
         return photo;
     }
 
-    public void setPhoto(String photo) {
+    public void setPhoto(ImageIcon photo) {
         this.photo = photo;
     }
 
     
-    
-    
+    @Override
+    public String toString(){
+        return name;
+    }
  }
