@@ -21,7 +21,7 @@ public class EmployeeInfo {
     private String teamInfo;
     private String positionTitle;
     private String contactInfo;
-    private int cellPhoneNumber;
+    private long cellPhoneNumber;
     private String emailAddress;
     private ImageIcon photo;
 
@@ -97,11 +97,11 @@ public class EmployeeInfo {
         this.contactInfo = contactInfo;
     }
 
-    public int getCellPhoneNumber() {
+    public long getCellPhoneNumber() {
         return cellPhoneNumber;
     }
 
-    public void setCellPhoneNumber(int cellPhoneNumber) {
+    public void setCellPhoneNumber(long cellPhoneNumber) {
         this.cellPhoneNumber = cellPhoneNumber;
     }
 
