@@ -44,6 +44,11 @@ public class LoginJPanel extends javax.swing.JPanel {
         jLabel4.setText("login as");
 
         jButton1.setText("Submit");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jPasswordField1.setText("jPasswor");
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
@@ -107,6 +112,13 @@ public class LoginJPanel extends javax.swing.JPanel {
     private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jPasswordField1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        SystemAdminJPanel systemPanel = new SystemAdminJPanel();
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
