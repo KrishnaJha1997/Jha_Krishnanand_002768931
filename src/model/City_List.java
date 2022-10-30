@@ -26,22 +26,6 @@ public class City_List {
     public void setHistory(ArrayList<City> city_history) {
         this.city_history = city_history;
     }
-    
-    public City addNewDetails(){
-        //Instantiate an object of Data Type EmployeeDetails
-        City newDetails = new City(city); 
-        city_history.add(newDetails);
-        return newDetails;
-       
-    }
-
-    public void deleteEmployeeDetails(City pd) {
-        city_history.remove(pd);
-        
-    }
-    
-    
-    
-    
+      
     
 }
