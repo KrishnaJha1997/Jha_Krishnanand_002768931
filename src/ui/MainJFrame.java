@@ -164,3 +164,4 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JSplitPane splitPane;
     // End of variables declaration//GEN-END:variables
 }
+
