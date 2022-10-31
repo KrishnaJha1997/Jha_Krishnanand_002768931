@@ -2,28 +2,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package model;
+package medical_rescource_system;
 
 /**
  *
- * @author Guest User
+ * @author Krishna
  */
-public class City {
-
-    public City(String city) {
+public class Community {
+    public Community(String community) {
     }
-    String city_name;
+    String community_name;
 
     public String getCity_name() {
-        return city_name;
+        return community_name;
     }
 
-    public void setCity_name(String city_name) {
-        this.city_name = city_name;
+    public void setCity_name(String community_name) {
+        this.community_name = community_name;
     }
     public String toString() {
         
-        return city_name;
+        return community_name;
     }
 
+    
 }
