@@ -1,0 +1,13 @@
+Hospital Management System Application is designed in a way that all the types of person can login using single login page.
+The Login Page has access to the following:
+1.System Admin
+2.Community Admin
+3.Hospital Admin
+4.Doctor
+5.Patient
+When a System Admin logs in he can create a person and classify him as doctor, patient , system admin, hospital admin or community admin and fill their respective details.
+A System Admin has access to every function , like Adding a hospital, Adding a City , Community and a house, View , Update or delete a persons entry, Encounter Directory,Doctor directory and Patient Directory.
+When a Doctor logs in he can have a look at patients directory, register an encounter and  view the encounter history.
+When a patient logs in they can view their person details and search for the near by hospital.
+A community Admin can add a City, Community and House and link it to the near by hospital and register.
+A Hospital Admin has access to doctor directory, patient directory, the encounter details, and Creating and updating a Hospital.
