@@ -2288,6 +2288,7 @@ public class MainJFrame extends javax.swing.JFrame {
                     CreatePerson_new.setVisible(false);
                     Option_Panel_Doctor.setVisible(false);
                     Option_Panel_Admin_new.setVisible(false);
+                    Per_RUD_Panel_new.setVisible(false);
                     
                     Encounter_Panel_new.setVisible(false);
         
