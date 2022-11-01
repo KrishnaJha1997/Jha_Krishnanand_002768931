@@ -6,7 +6,7 @@ package medical_rescource_system;
 
 /**
  *
- * @author monalikapradhan
+ * @author Krishna
  */
 public class Hospital {
     
